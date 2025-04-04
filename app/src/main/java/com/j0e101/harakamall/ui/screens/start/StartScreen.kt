@@ -74,7 +74,9 @@ fun StartScreen(navController: NavHostController) {
         Spacer(modifier = Modifier.height(5.dp))
 
         Button(
-            onClick = {},
+            onClick = {
+                navController.navigate("item")
+            },
             colors = ButtonDefaults.buttonColors(Orange),
             shape = RoundedCornerShape(10.dp),
             modifier = Modifier.fillMaxWidth().padding(start = 10.dp, end = 10.dp),

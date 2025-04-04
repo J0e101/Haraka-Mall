@@ -1,11 +1,15 @@
 package com.j0e101.harakamall.ui.screens.home
 
+import android.widget.Space
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.gestures.snapping.rememberSnapFlingBehavior
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Button
@@ -26,6 +30,8 @@ import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
 import com.j0e101.harakamall.R
+import com.j0e101.harakamall.ui.screens.item.ItemScreen
+import com.j0e101.harakamall.ui.theme.Orange
 
 @Composable
 fun HomeScreen(navController: NavHostController) {
@@ -61,16 +67,18 @@ fun HomeScreen(navController: NavHostController) {
             fontSize = 10.sp,
         )
 
+        Spacer(modifier = Modifier.height(height = 5.dp))
+
         Button(
             onClick = {},
-            colors = ButtonDefaults.buttonColors(Color.DarkGray),
-            shape = RoundedCornerShape(size = 10.dp),
-            modifier = Modifier.size(10.dp).clip(shape = CircleShape),
+            colors = ButtonDefaults.buttonColors(Orange),
+            shape = RoundedCornerShape(size = 5.dp),
+            modifier = Modifier.height(height = 50.dp),
 
         ) {
             Text(
                 text = "Learn More...",
-                color = Color.Green
+                color = Color.White
             )
         }
 

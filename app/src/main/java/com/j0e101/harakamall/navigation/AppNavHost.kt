@@ -16,7 +16,7 @@ import com.j0e101.harakamall.ui.screens.start.StartScreen
 fun AppNavHost(
     modifier: Modifier = Modifier,
     navController: NavHostController = rememberNavController(),
-    startDestination: String = ROUT_HOME
+    startDestination: String = ROUT_START
 ) {
 
     NavHost(
