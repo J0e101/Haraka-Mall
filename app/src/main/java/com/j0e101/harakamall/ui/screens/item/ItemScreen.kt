@@ -13,6 +13,7 @@ import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.ArrowForward
 import androidx.compose.material.icons.filled.Menu
 import androidx.compose.material.icons.filled.Notifications
 import androidx.compose.material.icons.filled.Search
@@ -45,6 +46,7 @@ import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 import com.j0e101.harakamall.R
+import com.j0e101.harakamall.navigation.ROUT_INTENT
 import com.j0e101.harakamall.ui.theme.Gold
 import com.j0e101.harakamall.ui.theme.Orange
 
@@ -95,6 +97,17 @@ fun ItemScreen(navController: NavController){
                     Icon(
                         imageVector = Icons.Default.Notifications,
                         contentDescription = "Notifications",
+                    )
+                }
+
+                IconButton(
+                    onClick = {
+                        navController.navigate("intent")
+                    }
+                ) {
+                    Icon(
+                        imageVector = Icons.Default.ArrowForward,
+                        contentDescription = "Forward",
                     )
                 }
             }
