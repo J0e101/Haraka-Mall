@@ -29,6 +29,7 @@ import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
 import com.j0e101.harakamall.R
+import com.j0e101.harakamall.navigation.ROUT_DASHBOARD
 import com.j0e101.harakamall.ui.theme.Orange
 
 @Composable
@@ -75,7 +76,7 @@ fun StartScreen(navController: NavHostController) {
 
         Button(
             onClick = {
-                navController.navigate("item")
+                navController.navigate(ROUT_DASHBOARD)
             },
             colors = ButtonDefaults.buttonColors(Orange),
             shape = RoundedCornerShape(10.dp),
