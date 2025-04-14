@@ -6,6 +6,8 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
@@ -31,8 +33,9 @@ import com.j0e101.harakamall.ui.theme.Orange
 @Composable
 fun HomeScreen(navController: NavHostController) {
     Column (
-        modifier = Modifier.fillMaxSize().
-        paint(painter = painterResource(R.drawable.img), contentScale = ContentScale.FillBounds)
+        modifier = Modifier.fillMaxSize()
+            .paint(painter = painterResource(R.drawable.img), contentScale = ContentScale.FillBounds)
+            .padding(start = 10.dp, end = 10.dp)
     ) {
         Text(
             text = "Haraka Mall at your Service",
@@ -63,23 +66,21 @@ fun HomeScreen(navController: NavHostController) {
             fontSize = 10.sp,
         )
 
-        Spacer(modifier = Modifier.height(height = 5.dp))
+        Spacer(modifier = Modifier.height(height = 10.dp))
 
         Button(
             onClick = {},
             colors = ButtonDefaults.buttonColors(Orange),
             shape = RoundedCornerShape(size = 5.dp),
-            modifier = Modifier.height(height = 50.dp),
-
+            modifier = Modifier.height(height = 40.dp)
+                .padding(start = 90.dp)
+                .width(width = 200.dp)
         ) {
             Text(
                 text = "Learn More...",
                 color = Color.White
             )
         }
-
-
-
 
     }
 }
